@@ -7,27 +7,26 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="qrcode.js"></script>
 </head>
-<body>
-<input id="idx" type="text" style="width:80%"/><br />
-<input id="name" type="text" style="width:80%" /><br />
-<input id="phone" type="text" style="width:80%" /><br />
+<body style="font-size:32px">
+<input id="idx" type="text" style="font-size:32px;width:80%"/><br />
+<input id="name" type="text" style="font-size:32px;width:80%" /><br />
+<input id="phone" type="text" style="font-size:32px;width:80%" /><br />
 
 <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
 
-<button type="button" onclick="prev()">上一个</button>
-<button type="button" onclick="next()">下一个</button>
+<button type="button" onclick="prev()" style="font-size:24px;width:80%">上一个</button><br/>
+<button type="button" onclick="next()" style="font-size:24px;width:80%">下一个</button><br/>
 
-<button type="button" onclick="idxChange()">指定序号</button>
+<button type="button" onclick="idxChange()" style="font-size:24px;width:80%">指定序号</button>
 
 <script type="text/javascript">
 var qrcode = new QRCode(document.getElementById("qrcode"), {
-	width : 100,
-	height : 100
+	width : 200,
+	height : 200
 });
 
 
