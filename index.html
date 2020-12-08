@@ -9,8 +9,8 @@
 </head>
 <body style="font-size:32px">
 <input id="idx" type="text" style="font-size:32px;width:80%"/><br />
-<input id="name" type="text" style="font-size:32px;width:80%" /><br />
-<input id="phone" type="text" style="font-size:32px;width:80%" /><br />
+<input id="name" type="text" style="font-size:32px;width:80%" disabled/><br />
+<input id="phone" type="text" style="font-size:32px;width:80%" disabled/><br />
 
 <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
 <br/>
@@ -22,13 +22,13 @@
 <button type="button" onclick="next()" style="font-size:24px;width:80%">下一个</button><br/>
 
 <button type="button" onclick="idxChange()" style="font-size:24px;width:80%">指定序号</button>
+<input id="count" type="text" style="font-size:32px;width:80%" disabled/><br />
 
 <script type="text/javascript">
 var qrcode = new QRCode(document.getElementById("qrcode"), {
-	width : 200,
-	height : 200
+	width : 250,
+	height : 250
 });
-
 
 var list = new Array();
 list[0] = "wu-无";
@@ -972,10 +972,10 @@ list[937] = "故事的小黄花-15156873611";
 list[938] = "故事的小黄花-18756546008";
 list[939] = "赓续-15759950120";
 list[940] = "赓续-13913170628";
-list[941] = "赓续-18556939766";
+list[941] = "赓续-15850024115";
 list[942] = "赓续-15699218318";
 list[943] = "赓续-18935948313";
-list[944] = "赓续-15878340932";
+list[944] = "赓续-13367836527";
 list[945] = "赓续-18280062547";
 list[946] = "赓续-13636760909";
 list[947] = "赓续-15159488724";
@@ -997,7 +997,7 @@ list[962] = "大隐-15893177105";
 list[963] = "大隐-13461831803";
 list[964] = "大隐-18739918739";
 list[965] = "大隐-18037136827";
-list[966] = "大隐-18839779570";
+list[966] = "大隐-18838779570";
 list[967] = "大隐-18638736160";
 list[968] = "大隐-15238086665";
 list[969] = "大隐-19939965406";
@@ -1209,16 +1209,6 @@ list[1174] = "谋事而动-18969189629";
 list[1175] = "谋事而动-17858953706";
 list[1176] = "谋事而动-17858938397";
 list[1177] = "谋事而动-18124027019";
-list[1178] = "爽歪歪BBY-18434649254";
-list[1179] = "爽歪歪BBY-18477283192";
-list[1180] = "爽歪歪BBY-17758501752";
-list[1181] = "爽歪歪BBY-17777195410";
-list[1182] = "爽歪歪BBY-13237752762";
-list[1183] = "爽歪歪BBY-18777570677";
-list[1184] = "臧鸡-13235178780";
-list[1185] = "臧鸡-18712362972";
-list[1186] = "臧鸡-15961169151";
-list[1187] = "臧鸡-13861053400";
 
 var idx = 0;
 
@@ -1227,6 +1217,7 @@ function next () {
 }
 
 next()
+$('#count').val('共' + (list.length - 1) + '账号');
 
 function prev () {
     makeCode2(--idx)
